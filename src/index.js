@@ -1,5 +1,5 @@
 const path = require("path");
-const https = require("https");
+const http = require("https");
 const express = require("express");
 const socketio = require("socket.io");
 const Filter = require("bad-words");
@@ -15,7 +15,7 @@ const {
 } = require("./utils/users");
 
 const app = express();
-const server = https.createServer(app);
+const server = http.createServer(app);
 const io = socketio(server);
 
 const port = process.env.PORT || 3000;
