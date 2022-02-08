@@ -41,7 +41,6 @@ const autoscroll = () => {
 };
 
 socket.on("message", (message) => {
-  console.log(message);
   const html = Mustache.render(messageTemplate, {
     username: message.username,
     message: message.text,
@@ -52,7 +51,6 @@ socket.on("message", (message) => {
 });
 
 socket.on("locationMessage", (message) => {
-  console.log(message);
   const html = Mustache.render(locationTemplate, {
     username: message.username,
     url: message.url,
@@ -88,8 +86,6 @@ $messageForm.addEventListener("submit", (e) => {
     if (error) {
       return console.log(error);
     }
-
-    console.log("Message delivered!");
   });
 });
 
@@ -105,7 +101,6 @@ sendLocation.addEventListener("click", () => {
     const { latitude, longitude } = position.coords;
     socket.emit("sendLocation", { latitude, longitude }, () => {
       sendLocation.removeAttribute("disabled");
-      console.log("Location shared!");
     });
   });
 });
