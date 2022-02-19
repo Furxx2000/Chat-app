@@ -6,6 +6,7 @@ const $messageFormInput = $messageForm.querySelector("input");
 const $messageFormButton = $messageForm.querySelector("button");
 const sendLocation = document.querySelector("#send-location");
 const $messages = document.querySelector("#messages");
+const $sidebar = document.querySelector("#sidebar");
 
 // Templates
 const messageTemplate = document.querySelector("#message-template").innerHTML;
@@ -44,6 +45,8 @@ socket.on("message", (message) => {
   const html = Mustache.render(messageTemplate, {
     username: message.username,
     message: message.text,
+    isAdmin: message.username === "Admin" ? "active" : "",
+    isActive: message.username === username ? "active" : "",
     createdAt: moment(message.createdAt).format("h:mm a"),
   });
   $messages.insertAdjacentHTML("beforeend", html);
@@ -54,6 +57,7 @@ socket.on("locationMessage", (message) => {
   const html = Mustache.render(locationTemplate, {
     username: message.username,
     url: message.url,
+    isActive: message.username === username ? "active" : "",
     createdAt: moment(message.createdAt).format("h:mm a"),
   });
 
@@ -110,4 +114,9 @@ socket.emit("join", { username, room }, (error) => {
     alert(error);
     location.href = "/";
   }
+});
+
+// 開啟Mobile版 sidebar
+$("#sidebar").on("click", function () {
+  $(".users").toggleClass("active");
 });

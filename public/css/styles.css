@@ -1,183 +1,273 @@
 /* General Styles */
+@import url("https://fonts.googleapis.com/css2?family=Jost:wght@400;700&display=swap");
 
 * {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
 }
 
 html {
-    font-size: 16px;
+  font-size: 16px;
 }
 
 input {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 body {
-    line-height: 1.4;
-    color: #333333;
-    font-family: Helvetica, Arial, sans-serif;
+  line-height: 1.4;
+  color: #333333;
+  font-family: "Jost", sans-serif;
 }
 
 h1 {
-    margin-bottom: 16px;
+  margin-bottom: 16px;
 }
 
 label {
-    display: block;
-    font-size: 14px;
-    margin-bottom: 8px;
-    color: #777;
+  display: block;
+  font-size: 14px;
+  margin-bottom: 8px;
+  color: #777;
 }
 
 input {
-    border: 1px solid #eeeeee;
-    padding: 12px;
-    outline: none;
+  border: 1px solid #eeeeee;
+  padding: 12px;
+  outline: none;
 }
 
 button {
-    cursor: pointer;
-    padding: 12px;
-    background: #7C5CBF;
-    border: none;
-    color: white;
-    font-size: 16px;
-    transition: background .3s ease;
+  cursor: pointer;
+  padding: 12px;
+  background: #7c5cbf;
+  border: none;
+  color: white;
+  font-size: 16px;
+  transition: background 0.3s ease;
 }
 
 button:hover {
-    background: #6b47b8;
+  background: #6b47b8;
 }
 
 button:disabled {
-    cursor: default;
-    background: #7c5cbf94;
+  cursor: default;
+  background: #7c5cbf94;
 }
 
 /* Join Page Styles */
 
 .centered-form {
-    background: #333744;
-    width: 100vw;
-    height: 100vh;   
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  background: #333744;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .centered-form__box {
-    box-shadow: 0px 0px 17px 1px #1D1F26;
-    background: #F7F7FA;
-    padding: 24px;
-    width: 250px;
+  box-shadow: 0px 0px 17px 1px #1d1f26;
+  background: #f7f7fa;
+  padding: 24px;
+  width: 250px;
 }
 
 .centered-form button {
-    width: 100%;
+  width: 100%;
 }
 
 .centered-form input {
-    margin-bottom: 16px;
-    width: 100%;
+  margin-bottom: 16px;
+  width: 100%;
 }
 
 /* Chat Page Layout */
 
 .chat {
-    display: flex;
+  display: flex;
 }
 
 .chat__sidebar {
-    height: 100vh;
-    color: white;
-    background: #333744;
-    width: 225px;
-    overflow-y: scroll
+  height: 100vh;
+  color: white;
+  background: #333744;
+  width: 225px;
 }
 
 /* Chat styles */
 
 .chat__main {
-    flex-grow: 1;
-    display: flex;
-    flex-direction: column;
-    max-height: 100vh;
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  max-height: 100vh;
 }
 
 .chat__messages {
-    flex-grow: 1;
-    padding: 24px 24px 0 24px;
-    overflow-y: scroll;
+  flex-grow: 1;
+  padding: 24px 24px 0 24px;
+  overflow-y: scroll;
+  background-color: beige;
 }
 
 /* Message Styles */
 
 .message {
-    margin-bottom: 16px;   
+  margin-bottom: 16px;
 }
 
 .message__name {
-    font-weight: 600;
-    font-size: 14px;
-    margin-right: 8px;
+  font-weight: 600;
+  font-size: 14px;
+  margin-right: 8px;
 }
 
 .message__meta {
-    color: #777;
-    font-size: 14px;
+  color: #777;
+  font-size: 14px;
 }
 
 .message a {
-    color: #0070CC;
+  color: #0070cc;
 }
 
 /* Message Composition Styles */
 
 .compose {
-    display: flex;
-    flex-shrink: 0;
-    margin-top: 16px;
-    padding: 24px;
+  display: flex;
+  flex-shrink: 0;
+  margin-top: 16px;
+  padding: 24px;
 }
 
 .compose form {
-    display: flex;
-    flex-grow: 1;
-    margin-right: 16px;
+  display: flex;
+  flex-grow: 1;
+  margin-right: 16px;
 }
 
 .compose input {
-    border: 1px solid #eeeeee;
-    width: 100%;
-    padding: 12px;
-    margin: 0 16px 0 0;
-    flex-grow: 1;
+  border: 1px solid #eeeeee;
+  width: 100%;
+  padding: 12px;
+  margin: 0 16px 0 0;
+  flex-grow: 1;
 }
 
 .compose button {
-    font-size: 14px;
+  font-size: 14px;
 }
 
 /* Chat Sidebar Styles */
 
 .room-title {
-    font-weight: 400;
-    font-size: 22px;
-    background: #2c2f3a;
-    padding: 24px;   
+  font-weight: 400;
+  font-size: 22px;
+  background: #2c2f3a;
+  padding: 24px;
 }
 
 .list-title {
-    font-weight: 500;
-    font-size: 18px;
-    margin-bottom: 4px;
-    padding: 12px 24px 0 24px;
+  font-weight: 500;
+  font-size: 18px;
+  margin-bottom: 4px;
+  padding: 12px 24px 0 24px;
 }
 
 .users {
-    list-style-type: none;
-    font-weight: 300;
-    padding: 12px 24px 0 24px;
+  list-style-type: none;
+  font-weight: 300;
+  padding: 12px 24px 0 24px;
+}
+
+@media (max-width: 425px) {
+  .chat {
+    flex-direction: column;
+    max-height: 100vh;
+  }
+
+  .chat__sidebar {
+    position: relative;
+    width: 100%;
+    height: auto;
+  }
+
+  .room-title {
+    font-size: 32px;
+    padding: 16px;
+  }
+
+  .list-title {
+    position: absolute;
+    right: 0;
+    top: 11%;
+    font-size: 24px;
+  }
+
+  .users {
+    position: fixed;
+    right: -41%;
+    min-width: 30%;
+    background-color: #2c2f3a;
+    padding: 12px 24px;
+    font-size: 18px;
+    transition: all 0.35s cubic-bezier(0, 0.83, 0.63, 1.01);
+  }
+
+  .users span {
+    display: inline-block;
+    width: 10px;
+    height: 10px;
+    margin-right: 1rem;
+    border-radius: 50%;
+    background-color: green;
+  }
+
+  .users li {
+    margin: 0.5rem 0;
+  }
+
+  .users.active {
+    right: 0;
+  }
+
+  .chat__main {
+    height: calc(100vh - 76.8px);
+  }
+
+  .compose {
+    margin-top: 0;
+  }
+
+  .compose input {
+    border-color: gray;
+  }
+
+  .message.active {
+    text-align: center;
+  }
+
+  .message > p.active {
+    text-align: right;
+  }
+
+  .message__content.active {
+    text-align: right;
+  }
+
+  .message__content span {
+    max-width: 82%;
+    text-align: left;
+    display: inline-block;
+    background-color: white;
+    padding: 0.6rem 1rem;
+    border-radius: 1rem;
+  }
+
+  .message__content span.active {
+    background-color: paleturquoise;
+  }
 }
