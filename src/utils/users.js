@@ -2,8 +2,8 @@ const users = [];
 
 const addUser = ({ id, username, room }) => {
   // Clear the data
-  username = username.trim().toLowerCase();
-  room = room.trim().toLowerCase();
+  username = username.trim();
+  room = room.trim();
 
   //   Validate the data
   if (!username || !room) {
