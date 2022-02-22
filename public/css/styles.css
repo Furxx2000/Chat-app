@@ -150,7 +150,7 @@ button:disabled {
 }
 
 .compose input {
-  border: 1px solid #eeeeee;
+  border: 1px solid gray;
   width: 100%;
   padding: 12px;
   margin: 0 16px 0 0;
@@ -181,6 +181,31 @@ button:disabled {
   list-style-type: none;
   font-weight: 300;
   padding: 12px 24px 0 24px;
+}
+
+.message.active {
+  text-align: center;
+}
+
+.message > p.active {
+  text-align: right;
+}
+
+.message__content.active {
+  text-align: right;
+}
+
+.message__content span {
+  max-width: 82%;
+  text-align: left;
+  display: inline-block;
+  background-color: white;
+  padding: 0.6rem 1rem;
+  border-radius: 1rem;
+}
+
+.message__content span.active {
+  background-color: paleturquoise;
 }
 
 @media (max-width: 425px) {
@@ -240,34 +265,5 @@ button:disabled {
 
   .compose {
     margin-top: 0;
-  }
-
-  .compose input {
-    border-color: gray;
-  }
-
-  .message.active {
-    text-align: center;
-  }
-
-  .message > p.active {
-    text-align: right;
-  }
-
-  .message__content.active {
-    text-align: right;
-  }
-
-  .message__content span {
-    max-width: 82%;
-    text-align: left;
-    display: inline-block;
-    background-color: white;
-    padding: 0.6rem 1rem;
-    border-radius: 1rem;
-  }
-
-  .message__content span.active {
-    background-color: paleturquoise;
   }
 }
